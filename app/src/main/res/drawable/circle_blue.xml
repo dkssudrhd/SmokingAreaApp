@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/circle"
+        android:background="#ff0000"
+        android:width="30dp"
+        android:height="30dp"
+        android:gravity="center"
+        tools:ignore="ResourceCycle" />
+
+</layer-list>

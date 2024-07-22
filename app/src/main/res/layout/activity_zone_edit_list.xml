@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KakaoMap.edit.zone_edit_list"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="편집 리스트"
+        android:textColor="#000000"
+        android:textSize="40sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/zone_edit_list_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/left_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:background="#ffffff"
+            app:srcCompat="@drawable/left_arrow"
+            android:layout_marginRight="5dp"/>
+
+        <ImageButton
+            android:id="@+id/right_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:background="#ffffff"
+            app:srcCompat="@drawable/right_arrow"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+</LinearLayout>

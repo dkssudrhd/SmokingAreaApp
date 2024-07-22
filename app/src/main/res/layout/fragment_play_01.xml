@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".play.Play_01">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.kakao.vectormap.MapView
+            android:id="@+id/play_01_map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.kakao.vectormap.MapView>
+
+
+        <LinearLayout
+            android:id="@+id/play_01_area_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/click_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@android:drawable/btn_dialog" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/rounded_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/play_01_area_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="구역이름"
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/play_01_area_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pretendard_semibold"
+                            android:text="주소"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:src="@drawable/rectangle_6" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/play_01_area_imageView1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="10dp" />
+
+                            <ImageView
+                                android:id="@+id/play_01_area_imageView2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="10dp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/play_01_like"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/icon_favorite_border_" />
+
+                        <LinearLayout
+                            android:id="@+id/play_01_recommend_linear"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_border"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/icon_thumb_up_" />
+
+                                <TextView
+                                    android:id="@+id/play_01_count_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/pretendard_medium"
+                                    android:text="1000"
+                                    android:textColor="#000000" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/rounded_border"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/play_01_load_direction_linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="#FFFFFF"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="길안내" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/play_01_first_checking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f4f4f4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="현재 위치를 알려 주는 버튼 =>"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textSize="26sp"
+                android:layout_marginRight="50dp"
+                android:textColor="#000000"
+                android:gravity="center|right"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="가까운 흡연 구역 찾기 버튼 =>"                android:fontFamily="@font/pretendard_semibold"
+                android:textSize="26sp"
+                android:layout_marginRight="50dp"
+                android:textColor="#000000"
+                android:gravity="center|right"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/smoking_zone_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="마크 클릭시 구역의 이름. 위치\n 구역 사진을 볼 수 있고\n길 안내를 사용할 수 있습니다."
+                    android:textSize="18sp"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp">
+
+            <ImageButton
+                android:id="@+id/play_01_first_start_btn"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:background="@drawable/rounded_border_full"
+                android:text="Button"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:text="시작하기"
+                android:gravity="center"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textSize="24sp"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+</LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/play_01_mylocation_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTintMode="screen"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mylocation" />
+
+            <ImageButton
+                android:id="@+id/play_01_search_zone_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTintMode="screen"
+                android:scaleType="centerCrop"
+                android:src="@drawable/smoking_zone_search_icon" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

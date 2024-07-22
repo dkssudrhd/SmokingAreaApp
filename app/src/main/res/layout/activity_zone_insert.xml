@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KakaoMap.edit.zone_insert">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#f0f0f0">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:gravity="center"
+                android:text="흡연/금연구역 추가"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/zone_insert_arrow_back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="back_btn"
+                    android:src="@drawable/icon_arrow_back" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:text="사진 업로드"
+                android:textColor="#000000"
+                android:textSize="28sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:background="#A0808080"
+                        android:onClick="image_btn"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/camera"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/zone_image2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/zone_image1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </ScrollView>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="#000000"
+                android:text="장소이름"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/title_editTextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:ems="12"
+                android:hint="ex) 조선대학교 IT"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="#000000"
+                android:text="장소 주소" />
+
+            <EditText
+                android:id="@+id/address_editTextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:hint="ex) 광주 동구 조선대5길 65" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="#000000"
+                android:text="장소 유형" />
+
+            <EditText
+                android:id="@+id/type_editTextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:hint="ex) 학교" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textColor="#000000"
+                    android:text="흡연 가능 여부" />
+
+                <Spinner
+                    android:id="@+id/zone_can_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textColor="#000000"
+                    android:text="장소의 크기" />
+
+                <EditText
+                    android:id="@+id/size_editTextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:layout_marginTop="10dp"
+                    android:hint="ex) 1" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="현재위치 말고 다른 위치를 사용할 경우"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/x_and_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="x_and_y_btn"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:padding="10dp"
+                android:background="#BED8F1"
+                android:text="다른위치사용" />
+
+            <LinearLayout
+                android:id="@+id/x_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="위도"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/y_editTextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="ex) 35.1402728063"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/y_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="경도"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/x_editTextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="ex) 126.9340408153"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="upload_btn"
+                android:background="#BED8F1"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="#000000"
+                android:text="추가" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

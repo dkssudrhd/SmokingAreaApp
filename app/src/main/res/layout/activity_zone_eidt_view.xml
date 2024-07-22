@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".KakaoMap.edit.zone_edit_view">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="구역 설정"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+    />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="장소 이름"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/zone_edit_view_title_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="ex) 조선대학교 IT"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="장소 유형" />
+
+                <EditText
+                    android:id="@+id/zone_edit_view_type_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:hint="ex) 학교" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="흡연 가능 여부" />
+
+                <Spinner
+                    android:id="@+id/zone_edit_view_zone_can_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="장소의 크기" />
+
+                <EditText
+                    android:id="@+id/zone_edit_view_size_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:hint="ex) 1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="장소 승인 여부" />
+
+                <Spinner
+                    android:id="@+id/zone_edit_view_zone_situation_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="현재위치 말고 다른 위치를 사용할 경우"
+                android:layout_margin="5dp"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/zone_edit_view_x_and_y"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="zone_eidt_x_and_y_btn"
+                android:background="#7F00FF"
+                android:layout_margin="10dp"
+                android:text="다른위치사용" />
+
+            <LinearLayout
+                android:id="@+id/zone_edit_view_y_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="위도"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/zone_edit_view_y_editTextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="ex) 35.1402728063"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/zone_edit_view_x_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="경도"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/zone_edit_view_x_editTextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ems="10"
+                    android:hint="ex) 126.9340408153"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="zone_edit_view_image_btn"
+                android:background="#7F00FF"
+                android:layout_margin="10dp"
+                android:text="사진 업로드" />
+
+            <ImageView
+                android:id="@+id/zone_edit_view_zone_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="zone_edit_update_btn"
+                android:layout_margin="10dp"
+                android:background="#7F00FF"
+                android:text="추가" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>
